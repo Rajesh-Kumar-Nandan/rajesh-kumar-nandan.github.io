@@ -1,0 +1,165 @@
+/* Color variables & Design tokens */
+:root {
+  --bg-color: #2b2118;
+  --border-color: #333539;
+  --link-color: #a8763e;
+  --link-hover: #ecf0f1;
+  --quote-bar: #8b8e95;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --content-max-width: 860px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Links */
+a {
+  color: #f7f3e3;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #ecf0f1;
+  text-decoration: underline;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.menu a:hover {
+  color: var(--link-hover);
+}
+
+/* Main Content Area: Constrained width, left-aligned, readable typography */
+body > h1,
+body > h2,
+body > h3,
+body > h4,
+body > p,
+body > ul,
+body > blockquote {
+  max-width: var(--content-max-width);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Top Page Title */
+h1 {
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #f7f3e3;
+  margin-top: 1.75rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+/* Section Headings */
+h2 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #f7f3e3;
+  margin-top: 2.25rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border-color);
+  letter-spacing: -0.3px;
+}
+
+/* Sub-headings */
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f7f3e3;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f7f3e3;
+  margin-top: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Paragraphs & Text */
+p {
+  color: #f7f3e3;
+  font-size: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+/* Bold Labels (e.g., Location:, Designation:, etc.) */
+p strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+
+/* Unordered Lists */
+ul {
+  padding-left: 3.5rem; /* Indented bullets inside container */
+  color: #f7f3e3;
+}
+
+ul li {
+  margin-bottom: 0.45rem;
+}
+
+.topic
+{
+  padding-left: 3.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 1.25rem 1rem;
+  }
+
+  body > h1,
+  body > h2,
+  body > h3,
+  body > h4,
+  body > p,
+  body > ul,
+  body > blockquote {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  ul {
+    padding-left: 2.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.45rem;
+  }
+}
